@@ -31,7 +31,7 @@ PerformanceLogger::getInstance()->startLogger("logTest.csv");
     パフォーマンスを計測したい処理;
 }
 ```
-雰囲気はこんな感じです。
+全体の雰囲気はこんな感じです。
 ```
 #include "../Logger/PerformanceLogger.h"
 
@@ -63,7 +63,7 @@ int main()
 
 ## 3. 出力ファイル
 
-
+上記のサンプルの出力結果です。CSV 形式で出力されます。
 ```
 Time[us],ThreadID,UserComment1,UserComment2,val1,val2
 4131.000000,21652,main,start,4120.000000,0.000000
@@ -80,8 +80,8 @@ Time[us],ThreadID,UserComment1,UserComment2,val1,val2
 Web アプリなのでこちらからも実行できます。  
 https://ii0244is.github.io/PerformanceViewer/
 
-結果はこんな感じ。
-![sample1](/image/sample1.png)
+結果はこんな感じです。  
+![sample1](/image/Sample1.png)
 
 # サンプル
 この機能の真骨頂はマルチスレッドなプログラムで発揮されます。例えば下記のようなスレッド乱立、排他制御しまくりのプログラムでも、各処理の順序を可視化して俯瞰することにより、どいつがパフォーマンスのボトルネックになっているかを探し出すことができ、性能改善のための手がかりを得ることができるかもしれません。
